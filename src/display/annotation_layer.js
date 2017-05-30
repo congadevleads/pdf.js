@@ -470,6 +470,10 @@ var TextWidgetAnnotationElement = (
           element.setAttribute('value', this.data.fieldValue);
         }
 
+        if(this.data.fieldName) {
+          element.setAttribute('name', this.data.fieldName);
+        }
+
         element.disabled = this.data.readOnly;
 
         if (this.data.maxLen !== null) {
