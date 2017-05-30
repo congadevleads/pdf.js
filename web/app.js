@@ -111,7 +111,7 @@ function configure(PDFJS) {
   PDFJS.imageResourcesPath = './images/';
   if (typeof PDFJSDev !== 'undefined' &&
       PDFJSDev.test('FIREFOX || MOZCENTRAL || GENERIC || CHROME')) {
-    PDFJS.workerSrc = '../build/pdf.worker.js';
+    PDFJS.workerSrc = '/assets/pdfjs-1.5.188/pdf.worker.js';
   }
   if (typeof PDFJSDev === 'undefined' || !PDFJSDev.test('PRODUCTION')) {
     PDFJS.cMapUrl = '../external/bcmaps/';
