@@ -229,6 +229,8 @@ var Page = (function PageClosure() {
     getOperatorList: function Page_getOperatorList(handler, task, intent,
                                                    renderInteractiveForms) {
       var self = this;
+      // For our purposes we always want to rasterize form elements because we don't care about editability
+      var renderInteractiveForms = false;
 
       var pdfManager = this.pdfManager;
       var contentStreamPromise = pdfManager.ensure(this, 'getContentStream',
